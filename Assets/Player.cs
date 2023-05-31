@@ -28,4 +28,19 @@ public class Player : MonoBehaviour
             rb2D.AddForce(Vector2.up * forca); // para o passaro pular 
         } 
     }
+
+    
+    private bool Morto = false;
+    public GameController controller;
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Morto = true;
+        anim.SetBool("Morto", true);
+        controller.BirdDied();
+    }
+
+
+
+
 }
