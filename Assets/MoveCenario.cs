@@ -18,8 +18,7 @@ public class MoveCenario : MonoBehaviour
     {
         if(transform.position.x <= -offset)
         {
-            float deslocamento = - (transform.position.x + offset) + ( offset * 2);
-            transform.position += Vector3.right * deslocamento;
+            transform.position += Vector3.right * 2 * offset;
         }
     }
 }
